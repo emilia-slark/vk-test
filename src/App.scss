@@ -1,30 +1,31 @@
 .App {
-  max-block-size: 80vw;
+  
   .button-add {
     position: fixed;
     bottom: 2rem;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 1rem 3rem;
-    font-size: 20px;
-    font-weight: 600;
     z-index: 9;
+    transition: background-color 0.1s;
+    padding: 1rem 3rem;
+    font-weight: 600;
+    font-size: 20px;
   }
 }
 
 #popup_new-student {
-  inline-size: 550px;
   position: relative;
   z-index: 9;
+  inline-size: 550px;
 
   .p-progress-spinner {
     position: absolute;
-    z-index: 10;
     top: 0;
     left: 0;
+    z-index: 10;
+    background-color: inherit;
     inline-size: 100%;
     block-size: 100%;
-    background-color: inherit;
   }
 
   #popup__form {
@@ -33,35 +34,22 @@
     padding-block-start: 1rem;
 
     & > fieldset {
-      border: none;
-      padding: 0;
       display: grid;
       grid-template-columns: 140px 1fr;
       gap: 2rem 1rem;
+      border: none;
+      padding: 0;
     }
 
     & footer {
-      margin-block-start: 2rem;
       display: flex;
-      gap: 0.5rem;
       justify-content: end;
+      gap: 0.5rem;
+      margin-block-start: 2rem;
     }
   }
 }
 
 button {
   font-weight: 600;
-}
-
-.button-delete {
-  font-size: 0.8rem;
-  block-size: 1rem;
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity 0.2s, visibility 0.2s;
-}
-
-.p-selectable-row:hover .button-delete{
-  visibility: visible;
-  opacity: 1;
 }

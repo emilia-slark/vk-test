@@ -1,4 +1,4 @@
-export interface IFormStudentValue {
+export interface FormStudentValue {
   fullName: string,
   phone?: string,
   faculty: string,
@@ -11,7 +11,7 @@ export interface IFormStudentValue {
   scholarship?: number,
 }
 
-export interface IStudent extends IFormStudentValue {
+export interface IStudent extends FormStudentValue {
   id: string,
   lastUpdated: string
 }

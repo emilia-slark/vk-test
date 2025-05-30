@@ -1,5 +1,5 @@
 import axios, { AxiosResponse } from "axios";
-import { IFormStudentValue, IStudent, TData } from "../utils/types";
+import { FormStudentValue, IStudent, TData } from "../types";
 import { getCurrentDateFormatted } from "../utils/helpers";
 
 axios.defaults.baseURL = 'http://localhost:5000';
@@ -33,7 +33,7 @@ export const getStudents = async (currentPage: number): Promise<TData> => {
   }
 };
 
-export const postStudent = async (student: IFormStudentValue): Promise<IStudent> => {
+export const postStudent = async (student: FormStudentValue): Promise<IStudent> => {
   try {
     const response: AxiosResponse<IStudent> = await axios.post<IStudent>('/students', { ...student, lastUpdated: getCurrentDateFormatted() });
     return response.data;
