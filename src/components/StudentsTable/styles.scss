@@ -1,0 +1,17 @@
+.students-table_wrapper {
+  position: relative;
+}
+
+.button-add {
+  position: sticky;
+  bottom: 2rem;
+  left: 50%;
+  gap: 1rem;
+  transform: translate(-50%, -50%);
+  z-index: 9;
+  transition: background-color 0.1s;
+  padding: 1rem 3rem;
+  font-weight: 600;
+  font-size: 20px;
+
+}

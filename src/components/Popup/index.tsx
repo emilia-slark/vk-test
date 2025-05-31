@@ -1,11 +1,12 @@
 import { Dialog } from "primereact/dialog";
 import { PopupProps } from "./types";
-import { useState } from "react";
+import "./styles.scss";
 
 const Popup = ({
   children,
   isActivePopup,
-  setIsActivePopup
+  setIsActivePopup,
+  header
 }: PopupProps) => {
 
     const onHidePopup = () => {
@@ -15,7 +16,7 @@ const Popup = ({
 
   return (
     <Dialog
-      header="Форма заполнения"
+      header={header}
       draggable={false}
       visible={isActivePopup}
       id="popup_new-student"

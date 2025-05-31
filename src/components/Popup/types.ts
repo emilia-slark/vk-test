@@ -4,4 +4,5 @@ export interface PopupProps {
   children: ReactElement,
   isActivePopup: boolean,
   setIsActivePopup: Dispatch<SetStateAction<boolean>>
+  header: string
 }
