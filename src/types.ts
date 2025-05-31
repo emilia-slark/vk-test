@@ -1,4 +1,4 @@
-export interface IFormStudentValue {
+export interface FormStudentValue {
   fullName: string,
   phone?: string,
   faculty: string,
@@ -8,10 +8,10 @@ export interface IFormStudentValue {
   status: "Активный" | "Академ. отпуск" | "Отчислен",
   studyForm: "Бюджет" | "Договор",
   gpa?: number,
-  scholarship?: number,
+  scholarship: number,
 }
 
-export interface IStudent extends IFormStudentValue {
+export interface IStudent extends FormStudentValue {
   id: string,
   lastUpdated: string
 }
@@ -19,4 +19,10 @@ export interface IStudent extends IFormStudentValue {
 export type TData = {
   students: IStudent[],
   total: number
+}
+
+export interface AxiosErrorInfo {
+  status?: number
+  message: string,
+  type: 'server' | 'network' | 'timeout' | 'unauthorized' | 'forbidden' | 'notfound' | 'unknown'
 }
